@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link href="./css/styles.css" rel="stylesheet" />
+
+    <!-- Responsive CSS -->
+    <link href="./css/responsive.css" rel="stylesheet" />
+
+    <!-- Font CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Variable</title>
+  </head>
+  <body>
+    <div class="feedback-bg-color vh-100">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><img class="mobile" src="./assets/iconWhite.svg"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"
+              ><img src="./assets/fluent_navigation-16-regular (1).svg"
+            /></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  style="color: #fff"
+                  aria-current="page"
+                  href="Blogs.html"
+                  >Blogs</a
+                >
+              </li>
+              <li class="nav-item">
+                <button
+                  class="
+                    nav-link
+                    getBtn
+                    ms-4
+                    d-flex
+                    flex-row
+                    align-items-center
+                    justify-content-center
+                    btn
+                    getBtnMobile1
+                  "
+                  style="background-color: #0a0a0b"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  Get early access &nbsp; ->
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div
+        class="
+          container
+          align-items-center
+          justify-content-center
+          text-center
+          d-flex
+          flex-column
+        "
+      >
+        <h2 class="F48 mb-4 padThank" style="color: #fff; z-index: 4">
+          Thank You
+        </h2>
+        <p
+          class="F18 mb-4 mobileWidth"
+          style="color: #fff; width: 40%; z-index: 4"
+        >
+          In real time in categories like Movies, Web series, Competitive exams
+          & many more.
+        </p>
+        <a class="backBtn mt-3" href="index.html">Back To Home</a>
+      </div>
+      <img class="bottom" src="./assets/Group 7476.svg" />
+      <img class="bottom-mobile" src="./assets/Group 7494.svg" />
+    </div>
+  </body>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    function submitSignup() {
+      var inputs = document.querySelectorAll("input");
+      var name = inputs[0].value;
+      var email = inputs[1].value;
+      let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      console.log(email, name);
+      if (email.match(regexEmail)) {
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+          email: email,
+        });
+
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        fetch("http://18.236.101.126:3000/api/user/user-list", requestOptions)
+          .then((response) => response.text())
+          .then((result) => {
+            inputs.forEach((inp) => (inp.value = ""));
+            $("#exampleModal").modal("hide");
+            $("#exampleModal1").modal("show");
+          })
+          .catch((error) => {
+            inputs.forEach((inp) => (inp.value = ""));
+            $("#exampleModal").modal("hide");
+            $("#exampleModal2").modal("show");
+          });
+      } else {
+        console.log(inputs);
+        inputs.forEach((inp) => (inp.value = ""));
+        alert("Enter Vlid email");
+      }
+    }
+  </script>
+</html>
