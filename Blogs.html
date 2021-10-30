@@ -327,7 +327,7 @@
 
           document.getElementById("firstBlog").innerHTML = `
           <div class="col-lg-7">
-            <img style="height: auto, width: 100%" src="${result[0].image}" />
+            <img class="blog-image-main" src="${result[0].image}" />
           </div>
           <div class="col-lg-5">
             <div class="text-start mt-4">
@@ -350,7 +350,7 @@
           for (var blog of result) {
             x += `
             <div class="col-lg-4 mb-5">
-              <img style="height: auto, width: 100%" src="${blog.image}" />
+              <img class="blog-image" src="${blog.image}" />
               <div class="text-start blog-content-list">
                 <p class="mb-2 mt-3 F14W500" style="letter-spacing: 0.04em">
                   ${blog.Tag.tag}
