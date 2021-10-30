@@ -644,7 +644,7 @@ a {
   font-size: 14px;
   line-height: 17px;
   color: #5452f6;
-  position: absolute;
+  position: fixed;
   bottom: 0.1em;
   z-index: 3;
   left: 50%;
