@@ -66,6 +66,7 @@
             </li>
             <li class="nav-item">
               <button
+              id="btnClick"
                 class="
                 nav-link
                 getBtn
@@ -522,6 +523,19 @@
     
     })
     .catch(error => console.log('error', error));
+    </script>
+     <script>
+      //Fix button focus issue
+
+var myModal = document.getElementById('exampleModal')
+
+myModal.addEventListener('hidden.bs.modal', function () {
+
+  setTimeout(() => {
+    console.log('Hiden')
+    document.getElementById("btnClick").blur()
+  }, 100);
+})
     </script>
   </body>
 </html>

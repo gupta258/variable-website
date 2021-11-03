@@ -48,9 +48,9 @@
     font-size: 24px;
     line-height: 29px;
   }
-  .F14BrandBlack {
-    font-size: 12px;
-    line-height: 16px;
+  .F16BrandBlack {
+    font-size: 14px;
+    line-height: 18.2px;
   }
   .accordion-button {
     font-size: 14px;
@@ -228,12 +228,6 @@
   .vector6 {
     display: none;
   }
-  .vector6Mobile {
-    display: block;
-    position: absolute;
-    bottom: 62%;
-    left: -3%;
-  }
   .mobile-rev {
     flex-direction: column-reverse;
   }
@@ -382,6 +376,9 @@
     left: 0;
     max-width: 100%;
     max-height: 500px !important;
+  }
+  .b-view {
+    display: block;
   }
 }
 

@@ -66,6 +66,7 @@
             </li>
             <li class="nav-item">
               <button
+              id="btnClick"
                 class="
                 nav-link
                 getBtn
@@ -87,8 +88,12 @@
         </div>
       </div>
     </nav>
+    <section class="firstBlog">
+      <div class="container">
+      <div class="row d-flex align-items-start" id="firstBlog"></div>
+      </div>
+    </section>
     <div class="container pad-blog-main">
-      <section class="row d-flex align-items-start" id="firstBlog"></section>
       <section class="text-center pad-blog">
         <div
           class="row justify-content-center align-items-center"
@@ -332,9 +337,10 @@
           <div class="col-lg-5">
             <div class="text-start mt-4">
               <p class="mb-2 F14W500" style="letter-spacing: 0.04em">${result[0].Tag.tag}</p>
-              <h3 class="mb-3 F32Brand" style="line-height: 39px">
+              <h3 class="mb-2 F32Brand" style="line-height: 39px">
                 ${result[0].title}
               </h3>
+              <p class="F16" style="width: 5em">${result[0].description}</p>
               <a
                 href="/Blog.html?id=${result[0].id}"
                 class="d-flex align-items-start mt-4 F16SM"
@@ -415,6 +421,19 @@
           
         }
       }
+    </script>
+    <script>
+      //Fix button focus issue
+
+var myModal = document.getElementById('exampleModal')
+
+myModal.addEventListener('hidden.bs.modal', function () {
+
+  setTimeout(() => {
+    console.log('Hiden')
+    document.getElementById("btnClick").blur()
+  }, 100);
+})
     </script>
   </body>
 </html>
