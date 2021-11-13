@@ -44,6 +44,25 @@ a {
   color: #fff;
 }
 
+.getBtn1 {
+  background-color: #0a0a0b;
+  box-shadow: 0px 4px 24px rgba(235, 87, 87, 0.16);
+  border-radius: 8px;
+  font-weight: 500;
+  width: 184px;
+  height: 49px;
+  color: #fff;
+  outline: none;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.getBtn1:hover {
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+  color: #0a0a0b;
+}
+
 .bg-color {
   background: radial-gradient(
     87.48% 83.43% at 48.58% 24.16%,
@@ -621,7 +640,7 @@ a {
   font-size: 16px;
   line-height: 19px;
   padding: 18px 24px 18px 24px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .custom-form-control-textarea::placeholder {
@@ -636,7 +655,7 @@ a {
   color: #fff;
   font-size: 16px;
   line-height: 19px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .submitBtn {
@@ -650,7 +669,7 @@ a {
   color: #5452f6;
   position: fixed;
   bottom: 0.1em;
-  z-index: 3;
+  z-index: 1;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;

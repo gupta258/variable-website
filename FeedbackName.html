@@ -64,7 +64,7 @@
                   class="nav-link active"
                   style="color: #fff"
                   aria-current="page"
-                  href="Blogs.html"
+                  href="#"
                   >Blogs</a
                 >
               </li>
@@ -81,8 +81,8 @@
                   justify-content-center
                   btn
                   getBtnMobile1
+                  getBtn1
                   "
-                  style="background-color: #0a0a0b"
                   data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 >
@@ -115,6 +115,7 @@
               id="exampleFormControlTextarea1"
               rows="5"
               placeholder="Your Feedback"
+              type="text"
             ></textarea>
           </div>
           <div class="col-lg-2"></div>
@@ -191,7 +192,7 @@
               class="btn-modal btn mt-3 ms-3 me-3"
               href="#"
             >
-              Share the app
+            Share with all friends
             </button>
             <button
               type="button"
@@ -246,9 +247,10 @@
   <script>
     function feedSubmit() {
       var inputs = document.querySelectorAll("input");
+      var feedback = document.querySelectorAll("textarea");
       var name = inputs[0].value;
       var email = inputs[1].value;
-      var feed = inputs[2].value;
+      var feed = feedback[0].value;
       let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       if (email.match(regexEmail)) {
         var myHeaders = new Headers();
@@ -274,11 +276,14 @@
             for (var inp in inputs) {
               inp.value = "";
             }
+            for (var feed in feedback) {
+              feed.value = "";
+            }
             window.location.href = "/FeedbackThanks.html";
           })
           .catch((error) => console.log("error", error));
       } else {
-        alert("Enter Vlid email");
+        alert("Enter Valid email");
       }
     }
   </script>

@@ -64,7 +64,7 @@
                   class="nav-link active"
                   style="color: #fff"
                   aria-current="page"
-                  href="Blogs.html"
+                  href="#"
                   >Blogs</a
                 >
               </li>
@@ -81,8 +81,8 @@
                     justify-content-center
                     btn
                     getBtnMobile1
+                    getBtn1
                   "
-                  style="background-color: #0a0a0b"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
                 >
@@ -118,6 +118,117 @@
       <img class="bottom" src="./assets/Group 7476.svg" />
       <img class="bottom-mobile" src="./assets/Group 7494.svg" />
     </div>
+    <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-content-first">
+              <h5 class="F24 mb-4">Be the first to get access</h5>
+              <input
+                class="form-control form-control-lg mt-3 custom-modal-input"
+                type="text"
+                placeholder="Your Name"
+                aria-label=".form-control-lg example"
+                name="username"
+              />
+              <input
+                class="
+                  form-control form-control-lg
+                  mt-4
+                  mb-3
+                  custom-modal-input
+                "
+                type="email"
+                placeholder="Your Email Address"
+                aria-label=".form-control-lg example"
+                name="email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+              />
+              <button
+
+                class="btn-modal btn mt-4"
+                onclick="submitSignup()"
+              >
+                Count Me In
+              </button>
+            <button
+              type="button"
+              class="custom-btn-close btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <img src="./assets/Group 7477.svg" />
+            </button>
+          </div>
+        </div>
+        <div
+        class="modal fade"
+        id="exampleModal1"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel1"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-content-second">
+            <h5 class="F40 mb-4">
+              You are super <span style="color: #5452f6">cooool!</span>
+            </h5>
+            <p class="F16">
+              We have sucessfully registered your mail for the beta launch,
+              about to launch our app.
+            </p>
+            <button
+              class="btn-modal btn mt-3 ms-3 me-3"
+              href="#"
+            >
+            Share with all friends
+            </button>
+            <button
+              type="button"
+              class="custom-btn-close btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <img src="./assets/Group 7477.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="modal fade"
+        id="exampleModal2"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel2"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content modal-content-already">
+            <h5 class="F40 mb-4">
+              Yess you are already a
+              <span style="color: #5452f6">part of family</span>
+            </h5>
+            <p class="F16 ms-3 me-3">
+              We have already registered your mail for the beta access,
+              launching soon.
+            </p>
+            <button class="btn-modal btn mt-3 ms-5 me-5" href="#">
+              Yesss!
+            </button>
+            <button
+              type="button"
+              class="custom-btn-close btn"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <img src="./assets/Group 7477.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
   </body>
 
   <script
