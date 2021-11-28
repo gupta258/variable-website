@@ -267,16 +267,16 @@
                 <div class="d-flex row align-items-center">
                   <div class="col-lg-1"></div>
                   <div class="col-lg-5 text-end mbCustom">
-                    <img class="blog-image" src="./assets/jonas-leupe-raWzvTTCBD8-unsplash (1).jpg" />
+                    <a href="./Blog.html"><img class="blog-image" src="./assets/jonas-leupe-raWzvTTCBD8-unsplash (1).jpg" /></a>
                   </div>
                   <div class="col-lg-4 text-start ms-2 center">
                     <p class="F14Brand">EDUCATION</p>
-                    <h3 class="F32Brand mb-3 width" style="width: 90%">
+                    <a href="./Blog.html"><h3 class="F32Brand mb-3 width" style="width: 90%">
                       How practicing quizzes can help you improve your score in exams 
-                    </h3>
-                    <p class="F16BrandBlack width" style="width: 80%">
+                    </h3></a>
+                    <a href="./Blog.html"><p class="F16BrandBlack width" style="width: 80%">
                       Here are 5 ways quizzes can help you improve your score in exams.
-                    </p>
+                    </p></a>
                     <a href="./Blog.html" class="F14W500" href="#">Read more -></a>
                   </div>
                   <div class="col-lg-2"></div>
@@ -286,16 +286,16 @@
                 <div class="d-flex row align-items-center">
                   <div class="col-lg-1"></div>
                   <div class="col-lg-5 text-end mbCustom">
-                    <img class="blog-image" src="./assets/robin-worrall-FPt10LXK0cg-unsplash.jpg" />
+                    <a href="./Blog1.html"><img class="blog-image" src="./assets/robin-worrall-FPt10LXK0cg-unsplash.jpg" /></a>
                   </div>
                   <div class="col-lg-4 text-start ms-2 center">
                     <p class="F14Brand">EDUCATION</p>
-                    <h3 class="F32Brand mb-3 width" style="width: 90%">
+                    <a href="./Blog1.html"><h3 class="F32Brand mb-3 width" style="width: 90%">
                       Most youth is wasting time just Scrolling. We have solution for it
-                    </h3>
-                    <p class="F16BrandBlack width" style="width: 80%">
+                    </h3></a>
+                    <a href="./Blog1.html"><p class="F16BrandBlack width" style="width: 80%">
                       These days a lot of youth is wasting time just scrolling on social media, We just keep on scrolling and scrolling through social media 
-                    </p>
+                    </p></a>
                     <a href="./Blog1.html" class="F14W500" href="#">Read more -></a>
                   </div>
                   <div class="col-lg-2"></div>
@@ -649,9 +649,6 @@
           </div>
         </div>
       </div>
-    
-    
-
     </div>
 
 
@@ -670,7 +667,7 @@
     </script>
     <!-- <script src="./js/FAQ's.js"></script> -->
     <script type="text/javascript">
-      const url = "http://18.236.101.126:3000/api/user";
+      const url = "https://ab2c-122-177-171-35.ngrok.io//api/user";
       var getAllFaqs = "<div></div>";
       function getAllfaqs() {
         $.ajax({
@@ -739,7 +736,7 @@
             redirect: "follow",
           };
 
-          fetch("http://18.236.101.126:3000/api/user/user-list", requestOptions)
+          fetch("https://ab2c-122-177-171-35.ngrok.io//api/user/user-list", requestOptions)
             .then((response) => response.text())
             .then((result) => {
               inputs.forEach((inp)=> inp.value = "")
