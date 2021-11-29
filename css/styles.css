@@ -757,3 +757,7 @@ a {
   padding-top: 4em;
   padding-bottom: 4em;
 }
+
+.tabWidth {
+  width: 80%;
+}

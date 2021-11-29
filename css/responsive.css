@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .submitBtn {
     position: unset;
   }
@@ -456,5 +456,12 @@
   .padding {
     padding-top: 0em;
     padding-bottom: 1em;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .tabWidth {
+    padding-left: 5em !important;
+    padding-right: 5em !important;
   }
 }
