@@ -390,7 +390,7 @@
             redirect: "follow",
           };
 
-          fetch("https://ab2c-122-177-171-35.ngrok.io//api/user/user-list", requestOptions)
+          fetch("https://ab2c-122-177-171-35.ngrok.io/api/user/user-list", requestOptions)
             .then((response) => response.text())
             .then((result) => {
               inputs.forEach((inp) => (inp.value = ""));
