@@ -396,7 +396,7 @@
         redirect: "follow",
       };
 
-      fetch("http://18.236.101.126:3000/api/user/blog", requestOptions)
+      fetch("https://node-vari-able.herokupp.com//api/user/blog", requestOptions)
         .then((response) => response.text())
         .then((result) => {
           result = JSON.parse(result);
@@ -473,7 +473,7 @@
             redirect: "follow",
           };
 
-          fetch("http://18.236.101.126:3000/api/user/user-list", requestOptions)
+          fetch("https://node-vari-able.herokupp.com//api/user/user-list", requestOptions)
             .then((response) => response.text())
             .then((result) => {
               inputs.forEach((inp)=> inp.value = "")
